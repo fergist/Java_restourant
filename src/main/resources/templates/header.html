@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<body>
+<header th:fragment="header(currentPage)">
+    <nav class = "menu">
+        <a href="/acc"><div class = "menuBox" th:classappend="${currentPage == 'acc' ? 'currentPage' : ''}"><p>Аккаунт</p></div></a>
+        <a href="/catalog"><div class = "menuBox" id = "first" th:classappend="${currentPage == 'catalog' ? 'currentPage' : ''}"><p>Главная</p></div></a>
+        <a href="#" onclick="submitForm()" id = "cartLink"><div class = "menuBox" id = "last" th:classappend="${currentPage == 'shopCart' ? 'currentPage' : ''}"><p>Корзина</p></div></a>
+    </nav>
+</header>
+</body>
+</html>

@@ -1,0 +1,187 @@
+a{
+    text-decoration: none;
+}
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    width: 312px;
+    margin-bottom: 40px;
+    margin-left: 25px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black;
+}
+
+.product p{
+    text-shadow: none;
+}
+
+.product img {
+    height: 280px;
+    width: 312px;
+    display: block;
+    backface-visibility: hidden;
+    border-radius: 8px;
+}
+
+.section{
+    margin: 200px 0 20px;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.catalogFlex:not(.stickyText) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+}
+
+
+.product::before {
+    content: '';
+    background: rgb(128, 128, 128);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    transition-property: top, opacity;
+    transition-duration: 0.3s;
+}
+
+.caption {
+
+    padding-bottom: 5px;
+    color: white;
+    bottom: 0;
+    left: 60px;
+    z-index: 3;
+    text-align: center;
+    overflow: auto;
+}
+
+.caption *{
+    position: relative;
+    display: block;
+    color:black;
+    opacity: 1;
+    transition-property: top, opacity;
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+}
+
+.caption:hover{
+    overflow: auto;
+}
+
+.caption .title {
+    margin: 1px 1px 1px 1px;
+    font-size: 18px;
+}
+
+.caption .info {
+    margin: 1px 1px 1px 1px;
+    font-size: 16px;
+}
+
+
+.product:hover .title {
+    transition-delay: 0.15s;
+}
+
+.product:hover .info {
+    transition-delay: 0.25s;
+}
+
+.removeAndPrice{
+    margin-bottom: 10px;
+    justify-self: start;
+}
+
+.remove-btn:nth-child(2):hover{
+    color:red;
+    border: 2px solid red;
+    background-color: white;
+}
+
+.remove-btn:nth-child(3):hover{
+    color: #E87302;
+    border: 2px solid #E87302;
+    background-color: white;
+}
+
+.remove-btn:nth-child(4):hover{
+    color:green;
+    border: 2px solid green;
+    background-color: white;
+}
+
+.remove-btn{
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.clickButtons {
+    justify-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.clickButtons *{
+    padding: 5px 10px;
+    border:none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.clickButtons input{
+    text-align: center;
+    background: #ffffff;
+
+}
+
+.plusMinus {
+    width: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    outline: none;
+}
+
+.buyIt{
+    justify-self: normal;
+    background: #ffffff;
+
+    grid-column-start: 1;
+    grid-column: span 3;
+    height: 50px;
+    margin-top:20px;
+}
+
+.plusMinus:active, .buyIt:active {
+    background: #928d8f;
+    transform: translate(0, 5px);
+}
+
+.description p{
+    word-wrap: break-word;
+    color:black;
+}

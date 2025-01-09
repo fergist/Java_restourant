@@ -1,0 +1,30 @@
+.contactsMenu{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    width: 25%;
+    max-height: 230px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #ffffff;
+}
+
+
+.remove-btn:nth-child(2):hover{
+    color:rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    background-color: white;
+}
+
+
+.remove-btn{
+    background: #000000;
+    border: 2px solid #ffffff;
+    margin-left: 10px;
+    padding: 0;
+    width: 100px;
+    height: 25px;
+    font-size: 15px;
+    text-align: center;
+}

@@ -1,0 +1,203 @@
+body {
+    background: white;
+    margin: 0;
+}
+
+
+
+header *{
+    z-index: 5;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.menu {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: grey;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 82px;
+    font-size: 105%;
+}
+
+.menuBox{
+    text-align: center;
+    position: relative;
+    height: 100%;
+}
+
+.menuBox p {
+    font-size: 25px;
+    text-shadow: none;
+}
+
+.menuBox:hover{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+}
+
+.menuBox:hover p{
+    color:white;
+}
+
+main{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+main p{
+    color: black;
+    text-shadow: none;
+}
+
+.cart{
+    position: relative;
+    left: 50px;
+    width: 1000px;
+}
+
+.contactsMenu{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    width: 25%;
+    max-height: 230px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: grey;
+}
+
+
+.contactsMenu p{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.userHeader{
+    display: flex;
+    align-items: center;
+}
+
+.userHeader *{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.userHeader p{
+    margin-right: 0;
+}
+
+.contactsMenu a{
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.remove-btn:nth-child(2):hover{
+    color:black;
+    border: 2px solid green;
+    background-color: white;
+}
+
+
+.remove-btn{
+    background: #a8a6a6;
+    border: 2px solid green;
+    margin-left: 10px;
+    padding: 0;
+    width: 100px;
+    height: 25px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.textInput{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+
+.end{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 50px 100px;
+    background: black;
+    overflow: hidden;
+}
+
+.end a, p{
+    color: white;
+    font-size: 18px;
+    padding: 7px;
+    text-shadow: 0 0 2px black;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.end a:hover{
+    text-shadow: none;
+    color: black;
+}
+
+.end > *{
+    justify-items: start;
+    display: grid;
+    align-content: space-between;
+}
+
+.contacts{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.contacts a, p{
+    padding: 0;
+}
+
+.contacts h2{
+    grid-column: 1 / span 2;
+}
+
+.shineButton {
+    padding: 10px 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+    border: 2px solid green;
+    font-size: 25px;
+    color: black;
+    transition: .2s ease-in-out;
+}
+
+.shineButton:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -1%;
+    left: -100%;
+    transform: skewX(-45deg);
+}
+
+.shineButton:hover {
+    background: #a3a1a1;
+    color: black;
+}
+
+.shineButton:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
+
+#formLogOut {
+    width: 150px;
+    top: 100px;
+    right: 50px;
+    position: absolute;
+}
